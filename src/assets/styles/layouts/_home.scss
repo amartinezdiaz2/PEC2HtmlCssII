@@ -11,15 +11,21 @@ body {
   font-size: 16px;
   line-height: 24px;
 
-  @media screen and (orientation: portrait){
+  @media screen and (orientation: portrait) {
 
     padding-right: 10px;
     padding-left: 10px;
   }
 }
 
+h1 { text-align: center; }
+
+/*
+* Configuración de la página con el listado de bandas
+*/
+
 .bandas--agrup figure,
-.bandas--agrup img{
+.bandas--agrup img {
   width: 200px;
   height: 200px;
 }
@@ -36,22 +42,27 @@ body {
   margin: auto;
 }
 
-.bandas {
-  max-width: 1200px;
-}
+.bandas { max-width: 1200px; }
 
-h1 {
-  text-align: center;
-}
+/*
+* Configuración de la imagen de la página con información general
+*/
 
-.articulo figure {
-  max-width: 70%;
-}
+.articulo figure { max-width: 70%; }
+
+/*
+* Configuración del formulario
+*/
 
 form {
   max-width: 900px;
   margin: auto;
 }
+
+
+/*
+* Configuración del poster para aquellos navegadores que no soporten el display grid.
+*/
 
 .poster h1 {
   margin-top: 10px;
@@ -63,7 +74,7 @@ form {
 .poster img {
   max-width: 900px;
 
-  @media screen and (orientation: portrait){
+  @media screen and (orientation: portrait) {
     width: 90vw;
   }
 }
@@ -73,13 +84,9 @@ form {
   text-align: center;
 }
 
-.poster a {
-  color: $azul;
-}
+.poster a { color: $azul; }
 
-.poster p a:hover {
-  color: $azulOscuro;
-}
+.poster p a:hover { color: $azulOscuro; }
 
 .poster p {
   max-width: 700px;
@@ -87,34 +94,31 @@ form {
   margin-left: auto;
 }
 
-.poster p::before {
-  content: '>  ';
-}
+.poster p::before { content: '>  '; }
 
-@supports (display: grid){
+/*
+* Cambios del poster en grid según la el tamaño de la pantalla y si el navegador soporta 
+*este tipo de display.
+*/
 
-  .poster{
+@supports (display: grid) {
+
+  .poster {
     display: grid;
     grid-template: 2% 13% 17% 9% 5% 4% 12% 7% 12% 7% 2% / 5% 20% 5% 8% 28% 10% 20% 2% 3%;
     max-width: 100%;
 
-    @media screen and (max-width: 1540px){
-      grid-template: 2% 20% 10% 9% 5% 6% 10% 9% 10% 7% 2% / 5% 20% 5% 8% 28% 10% 20% 2% 3%;
-    }
+    @media screen and (max-width: 1540px) { grid-template: 2% 20% 10% 9% 5% 6% 10% 9% 10% 7% 2% / 5% 20% 5% 8% 28% 10% 20% 2% 3%; }
 
-    @media screen and (max-width: 1340px){
-      grid-template: 2% 30% 0% 20% 1% 7% 0% 14% 4% 12% 2% / 5% 20% 5% 8% 28% 10% 20% 2% 3%;
-    }
+    @media screen and (max-width: 1340px) { grid-template: 2% 30% 0% 20% 1% 7% 0% 14% 4% 12% 2% / 5% 20% 5% 8% 28% 10% 20% 2% 3%; }
 
-    @media screen and (max-width: 1010px){
-      display: block;
-    }
+    @media screen and (max-width: 1010px) { display: block; }
   }
 
-  @media screen and (min-width: 1010px){
+  @media screen and (min-width: 1010px) {
 
     .poster figure, 
-    .poster img{
+    .poster img {
       grid-area: 1 / 1 / 12 / 10;
       width: 100%;
       max-width: 100%;
@@ -145,21 +149,21 @@ form {
       grid-area: 6 / 7 / 7 / 9;
       color: $primary;
       background-color: $info;
-      box-shadow: 0 .5rem 1rem rgba($blanco,.9);
+      box-shadow: $box-shadowN;
     }
     
-    .poster--p1{
+    .poster--p1 {
       grid-area: 10 / 2 / 11 / 3;
       color: $primary;
       background-color: $info;
-      box-shadow: 0 .5rem 1rem rgba($blanco,.9);
+      box-shadow: $box-shadowN;
     }
     
-    .poster--p2{
+    .poster--p2 {
       grid-area: 8 / 5 / 9 / 6;
       color: $primary;
       background-color: $info;
-      box-shadow: 0 .5rem 1rem rgba($blanco,.9);
+      box-shadow: $box-shadowN;
     }
   }
 }

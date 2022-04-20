@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -12,23 +12,23 @@
     <include src="views/header.html"></include>
     <main>
       <h1 class="mt-3">Para cualquier duda, contáctenos</h1>
-      <form name="consulta" id="consulta" method="post" class="my-5" data-netlify="true">
+      <form class="my-5" id="consulta" name="consulta" method="post" data-netlify="true">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+            <label class="form-label" for="exampleFormControlInput1">Correo electrónico</label>
+            <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="nombre@ejemplo.com">
           </div>
           <div class="my-3">
               <label for="FormControlAsunto">Asunto</label>
-              <input class="form-control" type="text" id="FormControlAsunto">
+              <input class="form-control" id="FormControlAsunto" type="text">
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+            <label class="form-label" for="exampleFormControlTextarea1">Consulta</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
-        <button type="submit" class="btn btn-secondary">Enviar</button>
+        <button class="btn btn-secondary" type="submit">Enviar</button>
       </form>
     </main>
     <include src="views/footer.html"></include>
-    <script type="module" src="./assets/scripts/app.js"></script><!-- do not remove this line! -->
+    <script src="./assets/scripts/app.js"></script><!-- do not remove this line! -->
   </body>
 </html>
