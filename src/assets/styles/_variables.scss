@@ -1,0 +1,15 @@
+
+$azul: rgb(47,45,185);
+$azulOscuro: rgb(20,19,94);
+$amarillo: rgb(236,227,96);
+$info: rgb(183,243,220);
+$blanco: rgb(255,255,255);
+$negro: rgb(0,0,0);
+
+$theme-colors: (
+  "azul":    $azul,
+  "amarillo": $amarillo,
+  "info": $info
+);
+
+$box-shadowN: 0 .5rem 1rem rgba($blanco,1);

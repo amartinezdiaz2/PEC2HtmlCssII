@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media screen and (orientation: portrait){
+
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.bandas--agrup figure,
+.bandas--agrup img{
+  width: 200px;
+  height: 200px;
+}
+
+.bandas--agrup {
+  max-width: 350px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bandas,
+.articulo {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.bandas {
+  max-width: 1200px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.articulo figure {
+  max-width: 70%;
+}
+
+form {
+  max-width: 900px;
+  margin: auto;
+}
+
+.poster h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.poster,
+.poster figure,
+.poster img {
+  max-width: 900px;
+
+  @media screen and (orientation: portrait){
+    width: 90vw;
+  }
+}
+
+.poster h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.poster a {
+  color: $azul;
+}
+
+.poster p a:hover {
+  color: $azulOscuro;
+}
+
+.poster p {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.poster p::before {
+  content: '>  ';
+}
+
+@supports (display: grid){
+
+  .poster{
+    display: grid;
+    grid-template: 2% 13% 17% 9% 5% 4% 12% 7% 12% 7% 2% / 5% 20% 5% 8% 28% 10% 20% 2% 3%;
+    max-width: 100%;
+
+    @media screen and (max-width: 1540px){
+      grid-template: 2% 20% 10% 9% 5% 6% 10% 9% 10% 7% 2% / 5% 20% 5% 8% 28% 10% 20% 2% 3%;
+    }
+
+    @media screen and (max-width: 1340px){
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1340px){
+
+    .poster figure, 
+    .poster img{
+      grid-area: 1 / 1 / 12 / 10;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+    }
+    
+    .poster h1 {
+      grid-area: 2 / 2 / 3 / 4;
+      order: 1;
+      padding-left: 10px;
+      margin: 0;
+      color: $blanco;
+      background-color: $azulOscuro;
+    }
+    
+    .poster h2 {
+      grid-area: 4 / 6 / 5 / 8;
+      margin: 0;
+      font-size: xxx-large;
+      color: $blanco;
+      text-align: center;
+      background-color: $primary;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    
+    .poster--p0 {
+      grid-area: 6 / 7 / 7 / 9;
+      color: $primary;
+      background-color: $info;
+      box-shadow: 0 .5rem 1rem rgba($blanco,.9);
+    }
+    
+    .poster--p1{
+      grid-area: 10 / 2 / 11 / 3;
+      color: $primary;
+      background-color: $info;
+      box-shadow: 0 .5rem 1rem rgba($blanco,.9);
+    }
+    
+    .poster--p2{
+      grid-area: 8 / 5 / 9 / 6;
+      color: $primary;
+      background-color: $info;
+      box-shadow: 0 .5rem 1rem rgba($blanco,.9);
+    }
+  }
+}
